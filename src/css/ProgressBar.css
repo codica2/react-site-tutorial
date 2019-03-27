@@ -1,0 +1,27 @@
+.site-tutorial_progress-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-tutorial_progress-bar__dot {
+  min-width: 7px;
+  min-height: 7px;
+  border-radius: 50%;
+  border: solid 1px;
+}
+
+.site-tutorial_progress-bar__line {
+  height: 1px;
+  width: 100%;
+}
+
+.site-tutorial_progress-bar__counter-step {
+  width: 85px;
+  margin-left: 10px;
+  padding: 2px 5px;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}

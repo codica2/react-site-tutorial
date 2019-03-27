@@ -1,0 +1,19 @@
+{
+  "name": "react-site-tutorial-example",
+  "homepage": "https://codica.github.io/react-site-tutorial",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "../node_modules/react",
+    "react-dom": "../node_modules/react-dom",
+    "react-site-tutorial": "file:.."
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

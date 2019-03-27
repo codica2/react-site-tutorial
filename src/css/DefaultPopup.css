@@ -1,0 +1,123 @@
+.site-tutorial-control-panel {
+  justify-content: space-around;
+  align-items: center;
+  width: 450px;
+  min-width: 385px;
+  min-height: 140px;
+  border-radius: 2px;
+  background-color: #fff;
+  font-family: Raleway, sans-serif;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, 0.288);
+  z-index: 5001;
+}
+
+.site-tutorial-control-panel .description {
+  padding: 10px;
+  padding-top: 5px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-height: 90px;
+}
+
+.site-tutorial-control-panel .description h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.site-tutorial-control-panel .nav {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 5px;
+  height: 50px;
+}
+
+.site-tutorial-control-panel .progress-wrap {
+  padding: 5px 20px;
+  box-sizing: border-box;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.site-tutorial-control-panel .group-buttons {
+  display: flex;
+  height: 100%;
+  width: 30%;
+}
+
+.site-tutorial-control-panel .group-buttons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.site-tutorial-control-panel .prev-site-tutorial {
+  background-color: rgb(226, 226, 226);
+}
+
+.site-tutorial-control-panel .prev-site-tutorial:hover {
+  background-color: rgb(201, 201, 201);
+}
+
+.site-tutorial-control-panel .prev-site-tutorial:active {
+  background-color: rgb(141, 141, 141);
+  box-shadow: inset 1px 1px 4px -1px #000;
+}
+
+.site-tutorial-control-panel .next-site-tutorial {
+  background-color: #ff3a41;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.site-tutorial-control-panel .next-site-tutorial:hover {
+  opacity: 0.98;
+}
+
+.site-tutorial-control-panel .next-site-tutorial:active {
+  opacity: 1;
+  box-shadow: inset 1px 1px 4px -1px #000;
+}
+
+.site-tutorial-control-panel .next-site-tutorial:disabled,
+.site-tutorial-control-panel .next-site-tutorial[disabled] {
+  background-color: rgb(175, 99, 101);
+}
+
+.progress-counter-site-tutorial {
+  margin: 0;
+  margin-left: 18px;
+}
+
+.stop-site-tutorial {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  right: 1px;
+  top: 1px;
+}
+
+.stop-site-tutorial:hover {
+  opacity: 0.8;
+}
+
+.title-site-tutorial {
+  font-weight: 600;
+}
+
+.wrap-progress-bar {
+  width: 70%;
+  padding: 0 10px;
+}
+
+.disable-buttons {
+  opacity: 0.7 !important;
+}
