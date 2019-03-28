@@ -125,11 +125,7 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
         Math.max(0, canvas.height)
       );
 
-      if (isFirstDraw) {
-        initPositionPopup();
-      } else {
-        animatePopup();
-      }
+      animatePopup();
     };
 
     const initPositionPopup = () => {
@@ -220,8 +216,8 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
           finishX = nextDivX - pW - offset - padding;
         }
 
-        x = x + delta(startX, finishX) * framePopup;
-        y = y + delta(startY, finishY) * framePopup;
+        x = isFirstDraw ? finishX : x + delta(startX, finishX) * framePopup;
+        y = isFirstDraw ? finishY : y + delta(startY, finishY) * framePopup;
 
         if (y === finishY && x === finishX) {
           framePopup = 0;

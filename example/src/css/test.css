@@ -1,0 +1,102 @@
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 20px;
+}
+
+.button-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.button-wrap button {
+  outline: none;
+  background-color: #0053b5;
+  width: 185px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.button-wrap button:hover {
+  background-color: #003e85;
+}
+
+#start-site-tutorial {
+  width: 40px;
+  height: 20px;
+  margin: 20px;
+}
+
+.tutorial {
+  background-color: #006be9;
+}
+
+.first-test {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.first-test div {
+  width: 150px;
+  height: 150px;
+}
+
+.div1 {
+  width: 200px !important;
+}
+
+.div2 {
+  width: 300px !important;
+}
+
+.second-test {
+  margin: 20px;
+}
+
+.second-test div {
+  margin-bottom: 20px;
+}
+
+.div4 {
+  width: 300px;
+  height: 95vh;
+}
+
+.div5 {
+  width: 300px;
+  height: 95vh;
+  margin-left: 40vw;
+}
+
+.div6 {
+  width: 300px;
+  height: 95vh;
+  margin-left: 80vw;
+}
+
+.div7 {
+  margin: 0 auto;
+  width: 85vw;
+  height: 25vh;
+}
+
+.div8 {
+  margin: 0 auto;
+  width: 90vw;
+  height: 70vh;
+}
+
+.div9 {
+  width: 85vw;
+  height: 100px;
+  margin: 20px auto;
+}
