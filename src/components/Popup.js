@@ -69,7 +69,7 @@ class ContextPopup extends Component {
 
     let newStyle = {
       ...style,
-      width: popupParams.width
+      width: popupParams && popupParams.width
     };
 
     return (

@@ -18,6 +18,7 @@
 }
 
 .site-tutorial_progress-bar__counter-step {
+  min-width: max-content;
   width: 85px;
   margin-left: 10px;
   padding: 2px 5px;
