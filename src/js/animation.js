@@ -1,6 +1,6 @@
 import { getCoords, getHeightBody, getWidthBody } from "../utils/helpers";
 
-const frameRate = 0.06; // 60 FPS
+const frameRate = 0.06;
 const time = 1000;
 
 const opacity = 0.7;
@@ -50,8 +50,6 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
       divWidth = divWidth + delta(divWidth, nextDivWidth) * frame;
       divHeight = divHeight + delta(divHeight, nextDivHeight) * frame;
 
-      // scroll
-
       if (
         divY + nextDivHeight / 2 >
           window.pageYOffset + window.innerHeight / 2 ||
@@ -89,7 +87,6 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // letf rectangle
       ctx.fillStyle = `rgba(0,0,0, ${opacity})`;
       ctx.fillRect(
         0,
@@ -98,7 +95,6 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
         Math.max(0, canvas.height)
       );
 
-      // top rectangle
       ctx.fillStyle = `rgba(0,0,0, ${opacity})`;
       ctx.fillRect(
         Math.max(0, divX - padding < 0 ? 0 : divX - padding),
@@ -107,7 +103,6 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
         Math.max(0, divY - padding)
       );
 
-      // right rectangle
       ctx.fillStyle = `rgba(0,0,0, ${opacity})`;
       ctx.fillRect(
         Math.max(0, divX + divWidth + padding),
@@ -116,7 +111,6 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
         Math.max(0, canvas.height)
       );
 
-      // bottom rectangle
       ctx.fillStyle = `rgba(0,0,0, ${opacity})`;
       ctx.fillRect(
         divX - padding,
@@ -126,20 +120,6 @@ const startAnimation = (popup, canvas, div, nextDiv, isFirstDraw) =>
       );
 
       animatePopup();
-    };
-
-    const initPositionPopup = () => {
-      let x =
-        nextDivX -
-        offset +
-        (nextDivWidth + padding * 2) / 2 -
-        popup.offsetWidth / 2;
-      let y = nextDivY + nextDivHeight + offset * 2;
-
-      isFinishPopup = true;
-
-      popup.style.left = x + "px";
-      popup.style.top = y + "px";
     };
 
     const animatePopup = () => {

@@ -1,11 +1,11 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../state/store";
+import React, { Component } from "react";
+import { withContext } from "../utils/withContext";
 
 import { setPopup } from "../state/actions";
 
 const hideOpacity = 0.6;
 
-class ContextPopup extends Component {
+class Popup extends Component {
   state = {
     style: {
       display: "none",
@@ -91,17 +91,4 @@ class ContextPopup extends Component {
   }
 }
 
-const Popup = ({ children, className, id }) => {
-  const context = useContext(Context);
-
-  return (
-    <ContextPopup
-      context={context}
-      children={children}
-      className={className}
-      id={id}
-    />
-  );
-};
-
-export default Popup;
+export default withContext(Popup);

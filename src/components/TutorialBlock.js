@@ -1,11 +1,11 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../state/store";
+import React, { Component } from "react";
+import { withContext } from "../utils/withContext";
 import { addBlock } from "../state/actions";
 
-class ContextTutorialBlock extends Component {
+class TutorialBlock extends Component {
   componentDidMount() {
     const {
-      context: { store, dispatch },
+      context: { dispatch },
       title,
       description,
       step,
@@ -32,12 +32,4 @@ class ContextTutorialBlock extends Component {
   }
 }
 
-const TutorialBlock = ({ children, ...props }) => {
-  const context = useContext(Context);
-
-  return (
-    <ContextTutorialBlock context={context} children={children} {...props} />
-  );
-};
-
-export default TutorialBlock;
+export default withContext(TutorialBlock);

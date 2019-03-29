@@ -1,5 +1,5 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../state/store";
+import React, { Component } from "react";
+import { withContext } from "../utils/withContext";
 import { setАnimation, resetStep, hideShowPopup } from "../state/actions";
 import * as errors from "../utils/errors";
 
@@ -9,7 +9,7 @@ import { getHeightBody } from "../utils/helpers";
 
 import "../css/Canvas.css";
 
-class ContextCanvas extends Component {
+class Canvas extends Component {
   state = {
     style: {},
     firstDraw: true
@@ -39,7 +39,6 @@ class ContextCanvas extends Component {
       return;
     }
 
-    // fist draw
     if (isStartTutorial && this.state.firstDraw) {
       document.body.style.overflow = "hidden";
 
@@ -60,7 +59,6 @@ class ContextCanvas extends Component {
       this.setState({ firstDraw: false });
     }
 
-    // step forward
     if (step > this.props.context.store.step) {
       setАnimation(true)(dispatch);
 
@@ -74,7 +72,6 @@ class ContextCanvas extends Component {
       });
     }
 
-    // step back
     if (step < this.props.context.store.step && isStartTutorial) {
       setАnimation(true)(dispatch);
 
@@ -88,7 +85,6 @@ class ContextCanvas extends Component {
       });
     }
 
-    // stop
     if (!isAnimated && isStartTutorial === false && !this.state.firstDraw) {
       this.setInitStyle();
 
@@ -159,10 +155,4 @@ class ContextCanvas extends Component {
   }
 }
 
-const Canvas = () => {
-  const context = useContext(Context);
-
-  return <ContextCanvas context={context} />;
-};
-
-export default Canvas;
+export default withContext(Canvas);

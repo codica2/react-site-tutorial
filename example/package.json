@@ -8,6 +8,7 @@
     "prop-types": "^15.6.2",
     "react": "../node_modules/react",
     "react-dom": "../node_modules/react-dom",
+    "react-scripts": "../node_modules/react-scripts",
     "react-site-tutorial": "file:.."
   },
   "scripts": {

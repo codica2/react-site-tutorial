@@ -1,9 +1,9 @@
-import React, { useContext, Component, Fragment } from "react";
-import { Context } from "../state/store";
+import React, { Component, Fragment } from "react";
+import { withContext } from "../utils/withContext";
 
 import "../css/ProgressBar.css";
 
-class ContextProgressBar extends Component {
+class ProgressBar extends Component {
   render() {
     const {
       context: {
@@ -63,10 +63,4 @@ class ContextProgressBar extends Component {
   }
 }
 
-const ProgressBar = ({ ...props }) => {
-  const context = useContext(Context);
-
-  return <ContextProgressBar context={context} {...props} />;
-};
-
-export default ProgressBar;
+export default withContext(ProgressBar);

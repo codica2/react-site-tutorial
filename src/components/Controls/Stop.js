@@ -1,9 +1,9 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../../state/store";
+import React, { Component } from "react";
+import { withContext } from "../../utils/withContext";
 
 import { stopAnim, hideShowPopup } from "../../state/actions";
 
-class ContextButtonStop extends Component {
+class ButtonStop extends Component {
   stopTutorial = () => {
     const {
       store: { isAnimated },
@@ -35,27 +35,4 @@ class ContextButtonStop extends Component {
   }
 }
 
-const ButtonStop = ({
-  className,
-  id,
-  style,
-  children,
-  resetButtonStyles,
-  status
-}) => {
-  const context = useContext(Context);
-
-  return (
-    <ContextButtonStop
-      context={context}
-      className={className}
-      id={id}
-      style={style}
-      children={children}
-      status={status}
-      resetButtonStyles={resetButtonStyles}
-    />
-  );
-};
-
-export default ButtonStop;
+export default withContext(ButtonStop);

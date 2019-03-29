@@ -1,9 +1,9 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../../state/store";
+import React, { Component } from "react";
+import { withContext } from "../../utils/withContext";
 
 import { animateStep, hideShowPopup } from "../../state/actions";
 
-class ContextButtonBack extends Component {
+class ButtonBack extends Component {
   stepBack = () => {
     const { store, dispatch } = this.props.context;
 
@@ -34,19 +34,4 @@ class ContextButtonBack extends Component {
   }
 }
 
-const ButtonBack = ({ className, id, style, children, status }) => {
-  const context = useContext(Context);
-
-  return (
-    <ContextButtonBack
-      context={context}
-      className={className}
-      id={id}
-      style={style}
-      status={status}
-      children={children}
-    />
-  );
-};
-
-export default ButtonBack;
+export default withContext(ButtonBack);

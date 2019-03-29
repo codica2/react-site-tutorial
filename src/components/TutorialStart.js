@@ -1,9 +1,9 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../state/store";
+import React, { Component } from "react";
+import { withContext } from "../utils/withContext";
 import { startAnim } from "../state/actions";
 import * as errors from "../utils/errors";
 
-class ContextTutorialStart extends Component {
+class TutorialStart extends Component {
   startTutorial = () => {
     const {
       context: {
@@ -29,16 +29,4 @@ class ContextTutorialStart extends Component {
   }
 }
 
-const TutorialStart = ({ children, numTutorial }) => {
-  const context = useContext(Context);
-
-  return (
-    <ContextTutorialStart
-      context={context}
-      children={children}
-      numTutorial={numTutorial}
-    />
-  );
-};
-
-export default TutorialStart;
+export default withContext(TutorialStart);
