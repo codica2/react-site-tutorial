@@ -39,7 +39,6 @@ class Canvas extends Component {
       return;
     }
 
-    // fist draw
     if (isStartTutorial && this.state.firstDraw) {
       document.body.style.overflow = "hidden";
 
@@ -60,7 +59,6 @@ class Canvas extends Component {
       this.setState({ firstDraw: false });
     }
 
-    // step forward
     if (step > this.props.context.store.step) {
       setАnimation(true)(dispatch);
 
@@ -74,7 +72,6 @@ class Canvas extends Component {
       });
     }
 
-    // step back
     if (step < this.props.context.store.step && isStartTutorial) {
       setАnimation(true)(dispatch);
 
@@ -88,7 +85,6 @@ class Canvas extends Component {
       });
     }
 
-    // stop
     if (!isAnimated && isStartTutorial === false && !this.state.firstDraw) {
       this.setInitStyle();
 

@@ -5,7 +5,7 @@ import SiteTutorial from "react-site-tutorial";
 import Blocks from "./Blocks";
 
 const App = () => (
-  <SiteTutorial defaultPopupParams={{ color: "#3065ED" }}>
+  <SiteTutorial>
     <Blocks />
   </SiteTutorial>
 );

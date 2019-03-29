@@ -57,51 +57,6 @@ const Blocks = () => (
         <div className="tutorial div9" />
       </TutorialBlock>
     </div>
-
-    {/* <TutorialBlock numTutorial={1} step={1}>
-      <div className="test-tutorial-1" />
-    </TutorialBlock>
-
-    <TutorialBlock
-      numTutorial={1}
-      step={2}
-      title="First step"
-      description="This is description."
-    >
-      <div className="test-tutorial-2" />
-    </TutorialBlock>
-
-    <TutorialBlock
-      onFinish={() => {
-        console.log("This is callback too!");
-      }}
-      numTutorial={1}
-      step={2}
-      title="First step"
-      description="This is description."
-    >
-      <div className="test-tutorial-3" />
-    </TutorialBlock>
-
-    <TutorialBlock numTutorial={2} step={3}>
-      <div className="test-tutorial-4" />
-    </TutorialBlock>
-
-    <TutorialBlock
-      onFinish={() => {
-        console.log("callback");
-      }}
-      onAsyncFinish={enebleControls => {
-        setTimeout(() => {
-          console.log("asyncCallback");
-          enebleControls();
-        }, 3000);
-      }}
-      numTutorial={1}
-      step={1}
-    >
-      <div className="test-tutorial-5" />
-    </TutorialBlock> */}
   </div>
 );
 
