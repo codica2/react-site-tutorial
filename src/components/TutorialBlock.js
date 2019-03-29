@@ -5,7 +5,7 @@ import { addBlock } from "../state/actions";
 class TutorialBlock extends Component {
   componentDidMount() {
     const {
-      context: { dispatch },
+      context: { store, dispatch },
       title,
       description,
       step,
