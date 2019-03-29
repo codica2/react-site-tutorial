@@ -1,5 +1,5 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../state/store";
+import React, { Component } from "react";
+import { withContext } from "../utils/withContext";
 import { setАnimation, resetStep, hideShowPopup } from "../state/actions";
 import * as errors from "../utils/errors";
 
@@ -9,7 +9,7 @@ import { getHeightBody } from "../utils/helpers";
 
 import "../css/Canvas.css";
 
-class ContextCanvas extends Component {
+class Canvas extends Component {
   state = {
     style: {},
     firstDraw: true
@@ -159,10 +159,4 @@ class ContextCanvas extends Component {
   }
 }
 
-const Canvas = () => {
-  const context = useContext(Context);
-
-  return <ContextCanvas context={context} />;
-};
-
-export default Canvas;
+export default withContext(Canvas);
