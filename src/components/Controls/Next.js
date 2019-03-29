@@ -1,9 +1,9 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../../state/store";
+import React, { Component } from "react";
+import { withContext } from "../../utils/withContext";
 
 import { animateStep, hideShowPopup } from "../../state/actions";
 
-class ContextButtonNext extends Component {
+class ButtonNext extends Component {
   stepForward = () => {
     const {
       store: { blocks, numTutorial, step, isAnimated },
@@ -42,19 +42,4 @@ class ContextButtonNext extends Component {
   }
 }
 
-const ButtonNext = ({ className, id, style, children, status }) => {
-  const context = useContext(Context);
-
-  return (
-    <ContextButtonNext
-      context={context}
-      className={className}
-      id={id}
-      style={style}
-      children={children}
-      status={status}
-    />
-  );
-};
-
-export default ButtonNext;
+export default withContext(ButtonNext);

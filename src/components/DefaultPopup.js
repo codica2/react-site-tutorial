@@ -1,5 +1,5 @@
-import React, { useContext, Component } from "react";
-import { Context } from "../state/store";
+import React, { Component } from "react";
+import { withContext } from "../utils/withContext";
 
 import ProgressBar from "./ProgressBar";
 import Title from "./Controls/Title";
@@ -11,14 +11,14 @@ import Popup from "./Popup";
 
 import "../css/DefaultPopup.css";
 
-class ContextDefaultPopup extends Component {
+class DefaultPopup extends Component {
   state = {
     statusButtons: false
   };
 
   render() {
     const { statusButtons } = this.state;
-    const { popupParams } = this.props;
+    const { popupParams } = this.props.context;
 
     return (
       <Popup className="site-tutorial-control-panel">
@@ -82,10 +82,4 @@ class ContextDefaultPopup extends Component {
   }
 }
 
-const DefaultPopup = () => {
-  const { popupParams } = useContext(Context);
-
-  return <ContextDefaultPopup popupParams={popupParams} />;
-};
-
-export default DefaultPopup;
+export default withContext(DefaultPopup);
